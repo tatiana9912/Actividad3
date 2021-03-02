@@ -24,7 +24,7 @@
                 <section class="icon-details" *ngIf="isLoggedIn" (click)="logout()">
                     <p class="nav-user" id="loginUser"></p>
                 </section>
-                <app-icon-detail *ngFor='let iconDetail of iconDetails' (message)="alert($event)" [source]="iconDetail.source" [label]="iconDetail.label" [link]="iconDetail.link" (click)="iconDetail.label === 'Logout'?logout():null"></app-icon-detail>
+                <app-details *ngFor='let iconDetail of iconDetails' (message)="alert($event)" [source]="iconDetail.source" [label]="iconDetail.label" [link]="iconDetail.link" (click)="iconDetail.label === 'Logout'?logout():null"></app-details>
             </article>
         </section>
     </nav>
